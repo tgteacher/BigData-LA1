@@ -154,7 +154,7 @@ all operations must be re-implemented using the RDD API -- for
 instance, you are not allowed to simply convert results obtained with
 plain Python to RDDs.
 
-# Required syntaxes
+## Required syntax
 
 - `count_rdd.py <data_file>`
 - `parks_rdd.py <data_file>`
@@ -163,7 +163,7 @@ plain Python to RDDs.
 - `frequent_parks_count_rdd.py`
 - `intersection_rdd.py <data_file_1> <data_file_2>`
 
-# Tests
+## Tests
 
 - `tests/test_count_rdd.py`
 - `tests/test_parks_rdd.py`
@@ -182,7 +182,7 @@ all operations must be re-implemented using the DataFrame API -- for
 instance, you are not allowed to simply convert results obtained with
 the RDD API to Data Frames.
 
-# Required syntaxes
+## Required syntax
 
 - `count_df.py <data_file>`
 - `parks_df.py <data_file>`
@@ -191,7 +191,7 @@ the RDD API to Data Frames.
 - `frequent_parks_count_df.py`
 - `intersection_df.py <data_file_1> <data_file_2>`
 
-# Tests
+## Tests
 
 - `tests/test_count_df.py`
 - `tests/test_parks_df.py`
