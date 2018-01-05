@@ -33,7 +33,8 @@ http://donnees.ville.montreal.qc.ca/dataset/frenes-publics-proteges-injection-ag
 
 ## Task
 
-Write a Python script that downloads the [2016](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/0a5984e4-752f-401e-b2d9-aa0567535d39/download/frenepublicinjection2016.csv) and [2015](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/a57f787f-bde9-4a59-88d1-4ae742edd9b8/download/frenepublicinjection2015.csv) datasets to `data/frenepublicinjection2016.csv` and `data/frenepublicinjection2015.csv`.
+Write a Python script that downloads a data set URL in directory `data`,
+preserving the file name.
 
 ## Required syntax
 
@@ -43,11 +44,13 @@ Write a Python script that downloads the [2016](http://donnees.ville.montreal.qc
 
 `tests/test_adownload.py`
 
+In the remainder, the [2016](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/0a5984e4-752f-401e-b2d9-aa0567535d39/download/frenepublicinjection2016.csv) and [2015](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/a57f787f-bde9-4a59-88d1-4ae742edd9b8/download/frenepublicinjection2015.csv) data sets are used in the tests.
+
 # Counting entries
 
 ## Task
 
-Write a Python script that counts the number of entries (lines) in
+Write a Python script that prints the number of entries (lines) in
 the data file passed as first argument.
 
 ## Required syntax
@@ -62,8 +65,7 @@ the data file passed as first argument.
 
 ## Task
 
-Write a Python script that counts, in the data
-set passed as first argument, the number of trees that are *located in
+Write a Python script that prints the number of trees that are *located in
 a park*.
 
 ## Required syntax
@@ -78,9 +80,10 @@ a park*.
 
 ## Task
 
-Write a Python script that prints the list
-of unique parks where trees from the data set passed as first argument
-were treated. The list must be ordered alphabetically.
+Write a Python script that prints the list of unique parks where trees
+were treated. The list must be ordered alphabetically
+(case-insensitive sort). Every element in the list must be printed on
+a new line.
 
 ## Required syntax
 
@@ -95,8 +98,9 @@ were treated. The list must be ordered alphabetically.
 ## Task
 
 Write a Python script that counts the number of trees treated in each
-park and prints a list of (park, count) pairs ordered alphabetically
-by the park name.
+park and prints a list of "<park>: <count>" pairs ordered alphabetically
+by the park name. Every element in the list must be printed on a new
+line.
 
 ## Required syntax
 
@@ -112,7 +116,7 @@ by the park name.
 
 Write a Python script that prints the list of the 10 parks with the
 highest number of treated trees. Parks must be ordered by decreasing
-number of treated trees. The data file must be passed as argument.
+number of treated trees. Every list element must be printed on a new line.
 
 ## Required syntax
 
@@ -126,9 +130,9 @@ number of treated trees. The data file must be passed as argument.
 
 ## Task
 
-Write a Python script that prints the
-alphabetically sorted list of parks that had trees treated in 2016 and
-2015 (data files must be passed as arguments).
+Write a Python script that prints the alphabetically sorted list of
+parks that had trees treated both in 2016 and 2015. Every list element
+must be printed on a new line.
 
 ## Required syntax
 
@@ -140,9 +144,75 @@ alphabetically sorted list of parks that had trees treated in 2016 and
 
 # RDDs
 
+# Task
+
+Re-implement all the tasks above except dataset download using Apache
+Spark's Resilient Distributed Datasets API (RDD, see documentation
+[here](https://spark.apache.org/docs/latest/rdd-programming-guide.html)). Outputs
+must be identical to the ones obtained above in plain Python. Note:
+all operations must be re-implemented using the RDD API -- for
+instance, you are not allowed to simply convert results obtained with
+plain Python to RDDs.
+
+# Required syntaxes
+
+- `count_rdd.py <data_file>`
+- `parks_rdd.py <data_file>`
+- `uniq_parks_rdd.py <data_file>`
+- `uniq_parks_count_rdd.py <data_file>`
+- `frequent_parks_count_rdd.py`
+- `intersection_rdd.py <data_file_1> <data_file_2>`
+
+# Tests
+
+- `tests/test_count_rdd.py`
+- `tests/test_parks_rdd.py`
+- `tests/test_uniq_parks_rdd.py`
+- `tests/test_uniq_parks_count_rdd.py`
+- `tests/test_frequent_parks_count_rdd.py`
+- `tests/test_intersection_rdd.py`
+
 # DataFrames
+
+Re-implement all the tasks above except dataset download using Apache
+Spark's DataFrame API (see documentation
+[here](https://spark.apache.org/docs/latest/sql-programming-guide.html)). Outputs
+must be identical to the ones obtained above in plain Python. Note:
+all operations must be re-implemented using the DataFrame API -- for
+instance, you are not allowed to simply convert results obtained with
+the RDD API to Data Frames.
+
+# Required syntaxes
+
+- `count_df.py <data_file>`
+- `parks_df.py <data_file>`
+- `uniq_parks_df.py <data_file>`
+- `uniq_parks_count_df.py <data_file>`
+- `frequent_parks_count_df.py`
+- `intersection_df.py <data_file_1> <data_file_2>`
+
+# Tests
+
+- `tests/test_count_df.py`
+- `tests/test_parks_df.py`
+- `tests/test_uniq_parks_df.py`
+- `tests/test_uniq_parks_count_df.py`
+- `tests/test_frequent_parks_count_df.py`
+- `tests/test_intersection_df.py`
 
 # Undisclosed tests
 
-- Tests that the RDD or DataFrame API was used.
-- Same tests, on a different dataset.
+The following tests will be used to evaluate your assignment but will
+remain undisclosed.
+
+- All tests will be repeated using different datasets complying to the
+  same format. This is to prevent you from just hard-coding the
+  results of the tests in your answers. Hard-coded answers will be
+  graded at most 50%, since all tests will be repeated on undisclosed
+  data.
+
+The total number of tests will be 38, distributed as follows:
+- 2 download tests (1 disclosed, 1 undisclosed)
+- 12 plain Python tests (6 disclosed, 6 undisclosed)
+- 12 RDD tests (6 disclosed, 6 undisclosed)
+- 12 DataFrame tests (6 disclosed, 6 undisclosed)
