@@ -31,20 +31,11 @@ is described at
 http://donnees.ville.montreal.qc.ca/dataset/frenes-publics-proteges-injection-agrile-du-frene
 (use Google translate to translate from French to English). 
 
-## Task
-
-Write a Python script that downloads a data set URL in directory `data`,
-preserving the file name.
-
-## Required syntax
-
-`download.py <data_file>`
-
-## Test
-
-`tests/test_adownload.py`
-
-In the remainder, the [2016](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/0a5984e4-752f-401e-b2d9-aa0567535d39/download/frenepublicinjection2016.csv) and [2015](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/a57f787f-bde9-4a59-88d1-4ae742edd9b8/download/frenepublicinjection2015.csv) data sets are used in the tests.
+We will use the
+[2016](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/0a5984e4-752f-401e-b2d9-aa0567535d39/download/frenepublicinjection2016.csv)
+and
+[2015](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/a57f787f-bde9-4a59-88d1-4ae742edd9b8/download/frenepublicinjection2015.csv)
+data sets available in directory `data`.
 
 # Counting entries
 
@@ -146,7 +137,7 @@ must be printed on a new line.
 
 ## Task
 
-Re-implement all the tasks above except dataset download using Apache
+Re-implement all the tasks above using Apache
 Spark's Resilient Distributed Datasets API (RDD, see documentation
 [here](https://spark.apache.org/docs/latest/rdd-programming-guide.html)). Outputs
 must be identical to the ones obtained above in plain Python. Note:
@@ -177,7 +168,7 @@ plain Python to RDDs.
 
 ## Task
 
-Re-implement all the tasks above except dataset download using Apache
+Re-implement all the tasks above using Apache
 Spark's DataFrame API (see documentation
 [here](https://spark.apache.org/docs/latest/sql-programming-guide.html)). Outputs
 must be identical to the ones obtained above in plain Python. Note:
@@ -214,8 +205,7 @@ remain undisclosed.
   graded at most 50%, since all tests will be repeated on undisclosed
   data.
 
-The total number of tests will be 38, distributed as follows:
-- 2 download tests (1 disclosed, 1 undisclosed)
+The total number of tests will be 36, distributed as follows:
 - 12 plain Python tests (6 disclosed, 6 undisclosed)
 - 12 RDD tests (6 disclosed, 6 undisclosed)
 - 12 DataFrame tests (6 disclosed, 6 undisclosed)
