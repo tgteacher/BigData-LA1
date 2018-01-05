@@ -144,7 +144,7 @@ must be printed on a new line.
 
 # RDDs
 
-# Task
+## Task
 
 Re-implement all the tasks above except dataset download using Apache
 Spark's Resilient Distributed Datasets API (RDD, see documentation
@@ -173,6 +173,9 @@ plain Python to RDDs.
 - `tests/test_intersection_rdd.py`
 
 # DataFrames
+
+
+## Task
 
 Re-implement all the tasks above except dataset download using Apache
 Spark's DataFrame API (see documentation
