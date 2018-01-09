@@ -1,4 +1,4 @@
-# Big Data LA 1
+# LA1: Apache Spark RDD and DataFrame APIs
 
 The goal of this assignment is to implement a basic analysis of
 textual data using Apache Spark. To get started smoothly and become
@@ -89,7 +89,7 @@ a new line.
 ## Task
 
 Write a Python script that counts the number of trees treated in each
-park and prints a list of "<park>: <count>" pairs ordered alphabetically
+park and prints a list of "park: count" pairs ordered alphabetically
 by the park name. Every element in the list must be printed on a new
 line.
 

@@ -1,10 +1,10 @@
 import subprocess
 
-def test_count():
-    command="python3 ./answers/parks.py ./data/frenepublicinjection2016.csv"
+def test_uniq_parks():
+    command="python3 ./answers/uniq_parks_rdd.py ./data/frenepublicinjection2016.csv"
     process = subprocess.Popen(command, shell=True,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
     code=process.wait()
     assert(not code), "Command failed"
-    assert(process.stdout.read()=="8976\n")
+    assert(process.stdout.read()==open("tests/list_parks.txt","r").read())

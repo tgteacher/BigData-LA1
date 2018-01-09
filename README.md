@@ -1,4 +1,4 @@
-# LA-template
+# LA1: Apache Spark RDD and DataFrame APIs
 
 This repository is private in order to (1) encourage you to experiment
 various solutions without the fear of making mistakes publicly (2)
