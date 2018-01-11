@@ -41,7 +41,7 @@ data sets available in directory `data`.
 
 ## Task
 
-Write a Python script that prints the number of entries (lines) in
+Write a Python script that prints the number of trees (non-header lines) in
 the data file passed as first argument.
 
 ## Required syntax
