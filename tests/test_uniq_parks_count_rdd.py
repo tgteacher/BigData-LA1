@@ -1,7 +1,7 @@
 import subprocess
 
-def test_uniq_parks_count_rdd():
-    command="python3 ./answers/uniq_parks_counts_rdd.py ./data/frenepublicinjection2016.csv"
+def test_uniq_parks_count_df():
+    command="python3 ./answers/uniq_parks_counts_df.py ./data/frenepublicinjection2016.csv"
     process = subprocess.Popen(command, shell=True,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
