@@ -29,7 +29,7 @@ Specific instructions to complete this assignment are available [here](./ASSIGNM
 
 To grade your assignment, your TA will:
 1. Clone the latest release of your forked GitHub repository.
-2. Source the `env.sh` script: `source env.sh`.
+2. Source the `env.sh` script: `source answers/env.sh`. Feel free to add any setup step to this script (e.g. if your solution requires environment variables).
 3. Install any dependency with `pip install -r requirements.txt`.
 4. Add undisclosed tests to directory `test`.
 5. Run `pytest`.
