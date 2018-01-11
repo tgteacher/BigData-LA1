@@ -14,10 +14,12 @@ To prepare and submit your assignment, you will:
 2. Fork the repository on GitHub.
 3. In the settings of your fork, remove all contributors except (1) the course coordinator (username: `glatard`) (2) your TA. Failure to do so will be considered [unauthorized collaboration](http://www.concordia.ca/students/academic-integrity/offences.html) under Concordia's Academic Code of Conduct.
 4. Clone your fork and implement the assignment (see [specific instructions](./ASSIGNMEENT.MD)).
-5. Push your solution to your fork.
-6. Release your fork on GitHub
+5. Commit and push your solution to your fork.
+6. Release your fork on GitHub by the assignment due date. Any commit made after the due date will not be considered. 
 
-Your code will be tested with Python 3.6.
+Your code will be tested with Python 3.5.1 and Apache Spark version 2.2.0. Your code will be tested on `orwell.encs.concordia.ca` (a computer representative of the lab workstations) after the following modules were loaded:
+* `module load spark`
+* `module load python/3.5.1`
 
 ## Specific instructions
 
@@ -27,9 +29,10 @@ Specific instructions to complete this assignment are available [here](./ASSIGNM
 
 To grade your assignment, your TA will:
 1. Clone the latest release of your forked GitHub repository.
-2. Install any dependency with `pip install -r requirements.txt`.
-3. Add undisclosed tests to directory `test`.
-4. Run `pytest`.
+2. Source the `env.sh` script: `source env.sh`.
+3. Install any dependency with `pip install -r requirements.txt`.
+4. Add undisclosed tests to directory `test`.
+5. Run `pytest`.
 
 Your grade will be determined from the number of passing tests as
 returned by pytest. For instance, if 11 tests have passed out of 13,
