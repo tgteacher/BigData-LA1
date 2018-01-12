@@ -72,8 +72,7 @@ a park*.
 ## Task
 
 Write a Python script that prints the list of unique parks where trees
-were treated. The list must be ordered alphabetically
-(case-insensitive sort). Every element in the list must be printed on
+were treated. The list must be ordered alphabetically. Every element in the list must be printed on
 a new line.
 
 ## Required syntax
