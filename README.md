@@ -13,7 +13,7 @@ To prepare and submit your assignment, you will:
 1. Ask your TA to give you access to the repository.
 2. Fork the repository on GitHub.
 3. In the settings of your fork, remove all contributors except (1) the course coordinator (username: `glatard`) (2) your TA. Failure to do so will be considered [unauthorized collaboration](http://www.concordia.ca/students/academic-integrity/offences.html) under Concordia's Academic Code of Conduct.
-4. Clone your fork and implement the assignment (see [specific instructions](./ASSIGNMEENT.MD)).
+4. Clone your fork and implement the assignment (see [specific instructions](./ASSIGNMENT.MD)).
 5. Commit and push your solution to your fork.
 6. Release your fork on GitHub by the assignment due date. Any commit made after the due date will not be considered. 
 
