@@ -94,11 +94,11 @@ line.
 
 ## Required syntax
 
-`uniq_parks_count.py <data_file>`
+`uniq_parks_counts.py <data_file>`
 
 ## Test
 
-`tests/test_uniq_parks_count.py`
+`tests/test_uniq_parks_counts.py`
 
 # Most frequent items
 
