@@ -149,7 +149,7 @@ plain Python to RDDs.
 - `count_rdd.py <data_file>`
 - `parks_rdd.py <data_file>`
 - `uniq_parks_rdd.py <data_file>`
-- `uniq_parks_count_rdd.py <data_file>`
+- `uniq_parks_counts_rdd.py <data_file>`
 - `frequent_parks_count_rdd.py`
 - `intersection_rdd.py <data_file_1> <data_file_2>`
 
@@ -158,7 +158,7 @@ plain Python to RDDs.
 - `tests/test_count_rdd.py`
 - `tests/test_parks_rdd.py`
 - `tests/test_uniq_parks_rdd.py`
-- `tests/test_uniq_parks_count_rdd.py`
+- `tests/test_uniq_parks_counts_rdd.py`
 - `tests/test_frequent_parks_count_rdd.py`
 - `tests/test_intersection_rdd.py`
 
@@ -180,7 +180,7 @@ the RDD API to Data Frames.
 - `count_df.py <data_file>`
 - `parks_df.py <data_file>`
 - `uniq_parks_df.py <data_file>`
-- `uniq_parks_count_df.py <data_file>`
+- `uniq_parks_counts_df.py <data_file>`
 - `frequent_parks_count_df.py`
 - `intersection_df.py <data_file_1> <data_file_2>`
 
@@ -189,7 +189,7 @@ the RDD API to Data Frames.
 - `tests/test_count_df.py`
 - `tests/test_parks_df.py`
 - `tests/test_uniq_parks_df.py`
-- `tests/test_uniq_parks_count_df.py`
+- `tests/test_uniq_parks_counts_df.py`
 - `tests/test_frequent_parks_count_df.py`
 - `tests/test_intersection_df.py`
 
