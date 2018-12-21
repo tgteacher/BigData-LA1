@@ -5,9 +5,6 @@ before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
   - sudo apt-get install -y python3
-  - sudo apt-get install -y virtualenv
-  - python -m venv testing
-  - source testing/bin/activate
   - pip install pyspark
   - pip install pytest
 script:
