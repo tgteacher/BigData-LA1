@@ -1,11 +1,9 @@
 import subprocess
 import os
+import sys
+sys.path.insert(0, './answers')
+from answer import count_rdd
 
 def test_count_rdd():
-    command="python ./answers/count_rdd.py ./data/frenepublicinjection2014.csv"
-    process = subprocess.Popen(command, shell=True,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE)
-    code=process.wait()
-    assert(not code), "Command failed"
-    assert(process.stdout.read().decode("utf-8")=='12828'+os.linesep)
+    a = count_rdd("./data/frenepublicinjection2014.csv")
+    assert(a == 12828)

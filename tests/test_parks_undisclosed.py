@@ -1,11 +1,9 @@
 import subprocess
 import os
+import sys
+sys.path.insert(0, './answers')
+from answer import parks
 
 def test_count():
-    command="python ./answers/parks.py ./data/frenepublicinjection2014.csv"
-    process = subprocess.Popen(command, shell=True,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE)
-    code=process.wait()
-    assert(not code), "Command failed"
-    assert(process.stdout.read().decode("utf-8")=="1698"+os.linesep)
+    a = parks("./data/frenepublicinjection2014.csv")
+    assert(a == 1698)

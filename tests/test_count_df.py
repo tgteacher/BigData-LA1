@@ -1,10 +1,8 @@
 import subprocess
+import sys
+sys.path.insert(0, './answers')
+from answer import count_df
 
 def test_count_df():
-    command="python ./answers/count_df.py ./data/frenepublicinjection2016.csv"
-    process = subprocess.Popen(command, shell=True,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE)
-    code=process.wait()
-    assert(not code), "Command failed"
-    assert(process.stdout.read().decode("utf-8")=='27244\n')
+    a = count_df("./data/frenepublicinjection2016.csv")
+    assert(a == 27244)
