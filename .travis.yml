@@ -10,6 +10,8 @@ before_install:
   - pip install pyspark
   - pip install pytest
 script:
+ - ls
+ - pwd
  - pytest -q tests/test_canard.py
 
 after_success:
