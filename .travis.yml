@@ -8,8 +8,7 @@ before_install:
   - pip install pyspark
   - pip install pytest
 script:
- - pytest -q tests/test_count_rdd.py
- - pytest -q tests/test_count_df.py
+ - pytest -q tests/test_canard.py
 
 after_success:
   - echo "success"
