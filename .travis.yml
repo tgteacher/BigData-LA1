@@ -8,7 +8,7 @@ before_install:
   - pip install pyspark
   - pip install pytest
 script:
- - python run_test.py
+ - pytest -m run_test.py
 
 after_success:
   - echo "success"
