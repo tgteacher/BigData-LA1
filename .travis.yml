@@ -10,7 +10,7 @@ before_install:
   - pip install pytest
 script:
  - export PYTHONHASHSEED=0
- - pytest -q tests/test_count*.py tests/test_parks*.py tests/test_uniq*.py
+ - pytest -q tests
 
 after_success:
   - echo "success"
