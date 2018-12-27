@@ -1,10 +1,7 @@
-import subprocess
+import sys
+sys.path.insert(0, './answers')
+from answer import frequent_parks_count_rdd
 
 def test_frequent_parks_count_rdd():
-    command="python ./answers/frequent_parks_count_rdd.py data/frenepublicinjection2016.csv"
-    process = subprocess.Popen(command, shell=True,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE)
-    code=process.wait()
-    assert(not code), "Command failed"
-    assert(process.stdout.read().decode("utf-8")==open("tests/frequent.txt","r").read())
+    a = frequent_parks_count_rdd("./data/frenepublicinjection2016.csv")
+    assert(a == open("tests/frequent.txt","r").read())
