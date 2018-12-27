@@ -1,11 +1,7 @@
-import subprocess
+import sys
+sys.path.insert(0, './answers')
+from answer import intersection
 
 def test_intersection():
-    command="python ./answers/intersection.py  data/frenepublicinjection2016.csv\
-   ./data/frenepublicinjection2015.csv"
-    process = subprocess.Popen(command, shell=True,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE)
-    code=process.wait()
-    assert(not code), "Intersection command failed"
-    assert(process.stdout.read().decode("utf-8")==open("tests/intersection.txt","r").read())
+    a = intersection("./data/frenepublicinjection2016.csv", "./data/frenepublicinjection2015.csv")
+    assert(a == open("tests/intersection.txt","r").read())
