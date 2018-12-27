@@ -106,7 +106,8 @@ line.
 
 Write a Python script that prints the list of the 10 parks with the
 highest number of treated trees. Parks must be ordered by decreasing
-number of treated trees. Every list element must be printed on a new line.
+number of treated trees and by alphabetical order when they have similar number.
+Every list element must be printed on a new line.
 
 ## Required syntax
 
