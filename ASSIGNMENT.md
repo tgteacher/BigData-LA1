@@ -20,7 +20,11 @@ Important preliminary notes:
   exact syntax of the expected output: forget a new line and the tests
   won't pass!
 
-* Your answers to the tasks below *must* be located in directory `answers`. 
+* Your answers to the tasks below *must* be located in file `answers/answer.py`. 
+
+* A skeleton of your answer file already exists in file
+  `answers/answer_skeleton.py`. You should copy/paste this file to
+  `answers/answer.py` then start from it.
 
 # Dataset
 
@@ -46,7 +50,7 @@ the data file passed as first argument.
 
 ## Required syntax
 
-`count.py <data_file>`
+`def count(<data_file>):`
 
 ## Test
 
@@ -56,12 +60,12 @@ the data file passed as first argument.
 
 ## Task
 
-Write a Python script that prints the number of trees that are *located in
-a park*.
+Write a Python script that prints the number of trees that are *located in a park*.
+To get the park location information, have a look at the *Nom_parc* column (name of park).
 
 ## Required syntax
 
-`parks.py <data_file>`
+`def parks(<data_file>):`
 
 ## Test
 
@@ -77,7 +81,7 @@ a new line.
 
 ## Required syntax
 
-`uniq_parks.py <data_file>`
+`def uniq_parks(<data_file>)`
 
 ## Test
 
@@ -87,14 +91,13 @@ a new line.
 
 ## Task
 
-Write a Python script that counts the number of trees treated in each
-park and prints a list of "park: count" pairs ordered alphabetically
-by the park name. Every element in the list must be printed on a new
-line.
+Write a Python script that counts the number of trees treated in each park and
+prints a list of "park,count" pairs in a CSV manner ordered alphabetically by
+the park name. Every element in the list must be printed on a new line.
 
 ## Required syntax
 
-`uniq_parks_counts.py <data_file>`
+`def uniq_parks_counts(<data_file>)`
 
 ## Test
 
@@ -111,7 +114,7 @@ Every list element must be printed on a new line.
 
 ## Required syntax
 
-`frequent_parks_count.py`
+`def frequent_parks_count(<data_file>):`
 
 ## Test
 
@@ -127,14 +130,13 @@ must be printed on a new line.
 
 ## Required syntax
 
-`intersection.py <data_file_1> <data_file_2>`
+`def intersection(<data_file_1>, <data_file_2>)`
 
 ## Test
 
 `tests/test_intersection.py`
 
 # RDDs
-
 ## Task
 
 Re-implement all the tasks above using Apache
@@ -144,15 +146,16 @@ must be identical to the ones obtained above in plain Python. Note:
 all operations must be re-implemented using the RDD API -- for
 instance, you are not allowed to simply convert results obtained with
 plain Python to RDDs.
+Note the function *toCSVLine* in `answer_skeleton.py` that convert RDDs into a CSV string.
 
 ## Required syntax
 
-- `count_rdd.py <data_file>`
-- `parks_rdd.py <data_file>`
-- `uniq_parks_rdd.py <data_file>`
-- `uniq_parks_counts_rdd.py <data_file>`
-- `frequent_parks_count_rdd.py`
-- `intersection_rdd.py <data_file_1> <data_file_2>`
+- `def count_rdd(<data_file>):`
+- `def parks_rdd(<data_file>):`
+- `def uniq_parks_rdd(<data_file>):`
+- `def uniq_parks_counts_rdd(<data_file>):`
+- `def frequent_parks_count_rdd(<data_file>):`
+- `def intersection_rdd(<data_file_1>, <data_file_2>)`
 
 ## Tests
 
@@ -175,15 +178,16 @@ must be identical to the ones obtained above in plain Python. Note:
 all operations must be re-implemented using the DataFrame API -- for
 instance, you are not allowed to simply convert results obtained with
 the RDD API to Data Frames.
+Note the function *toCSVLine* in `answer_skeleton.py` that also convert DataFrames into a CSV string.
 
 ## Required syntax
 
-- `count_df.py <data_file>`
-- `parks_df.py <data_file>`
-- `uniq_parks_df.py <data_file>`
-- `uniq_parks_counts_df.py <data_file>`
-- `frequent_parks_count_df.py`
-- `intersection_df.py <data_file_1> <data_file_2>`
+- `def count_df(<data_file>):`
+- `def parks_df(<data_file>):`
+- `def uniq_parks_df(<data_file>):`
+- `def uniq_parks_counts_df(<data_file>):`
+- `def frequent_parks_count_df(<data_file>):`
+- `def intersection_df(<data_file_1> <data_file_2>):`
 
 ## Tests
 
