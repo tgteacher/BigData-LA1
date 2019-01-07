@@ -48,10 +48,6 @@ data sets available in directory `data`.
 Write a Python script that prints the number of trees (non-header lines) in
 the data file passed as first argument.
 
-## Required syntax
-
-`def count(<data_file>):`
-
 ## Test
 
 `tests/test_count.py`
@@ -62,10 +58,6 @@ the data file passed as first argument.
 
 Write a Python script that prints the number of trees that are *located in a park*.
 To get the park location information, have a look at the *Nom_parc* column (name of park).
-
-## Required syntax
-
-`def parks(<data_file>):`
 
 ## Test
 
@@ -79,10 +71,6 @@ Write a Python script that prints the list of unique parks where trees
 were treated. The list must be ordered alphabetically. Every element in the list must be printed on
 a new line.
 
-## Required syntax
-
-`def uniq_parks(<data_file>)`
-
 ## Test
 
 `tests/test_uniq_parks.py`
@@ -94,10 +82,6 @@ a new line.
 Write a Python script that counts the number of trees treated in each park and
 prints a list of "park,count" pairs in a CSV manner ordered alphabetically by
 the park name. Every element in the list must be printed on a new line.
-
-## Required syntax
-
-`def uniq_parks_counts(<data_file>)`
 
 ## Test
 
@@ -112,10 +96,6 @@ highest number of treated trees. Parks must be ordered by decreasing
 number of treated trees and by alphabetical order when they have similar number.
 Every list element must be printed on a new line.
 
-## Required syntax
-
-`def frequent_parks_count(<data_file>):`
-
 ## Test
 
 `tests/test_frequent_parks_count.py`
@@ -127,10 +107,6 @@ Every list element must be printed on a new line.
 Write a Python script that prints the alphabetically sorted list of
 parks that had trees treated both in 2016 and 2015. Every list element
 must be printed on a new line.
-
-## Required syntax
-
-`def intersection(<data_file_1>, <data_file_2>)`
 
 ## Test
 
@@ -147,15 +123,6 @@ all operations must be re-implemented using the RDD API -- for
 instance, you are not allowed to simply convert results obtained with
 plain Python to RDDs.
 Note the function *toCSVLine* in `answer_skeleton.py` that convert RDDs into a CSV string.
-
-## Required syntax
-
-- `def count_rdd(<data_file>):`
-- `def parks_rdd(<data_file>):`
-- `def uniq_parks_rdd(<data_file>):`
-- `def uniq_parks_counts_rdd(<data_file>):`
-- `def frequent_parks_count_rdd(<data_file>):`
-- `def intersection_rdd(<data_file_1>, <data_file_2>)`
 
 ## Tests
 
@@ -179,15 +146,6 @@ all operations must be re-implemented using the DataFrame API -- for
 instance, you are not allowed to simply convert results obtained with
 the RDD API to Data Frames.
 Note the function *toCSVLine* in `answer_skeleton.py` that also convert DataFrames into a CSV string.
-
-## Required syntax
-
-- `def count_df(<data_file>):`
-- `def parks_df(<data_file>):`
-- `def uniq_parks_df(<data_file>):`
-- `def uniq_parks_counts_df(<data_file>):`
-- `def frequent_parks_count_df(<data_file>):`
-- `def intersection_df(<data_file_1> <data_file_2>):`
 
 ## Tests
 
