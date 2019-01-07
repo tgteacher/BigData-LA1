@@ -22,9 +22,8 @@ Important preliminary notes:
 
 * Your answers to the tasks below *must* be located in file `answers/answer.py`. 
 
-* A skeleton of your answer file already exists in file
-  `answers/answer_skeleton.py`. You should copy/paste this file to
-  `answers/answer.py` then start from it.
+* A skeleton of your answer file already exists in file `answers/answer.py`
+  with the required syntax for each function.
 
 # Dataset
 
@@ -122,7 +121,7 @@ must be identical to the ones obtained above in plain Python. Note:
 all operations must be re-implemented using the RDD API -- for
 instance, you are not allowed to simply convert results obtained with
 plain Python to RDDs.
-Note the function *toCSVLine* in `answer_skeleton.py` that convert RDDs into a CSV string.
+Note that the function *toCSVLine* in `answer.py` converts RDDs into CSV strings.
 
 ## Tests
 
@@ -145,7 +144,7 @@ must be identical to the ones obtained above in plain Python. Note:
 all operations must be re-implemented using the DataFrame API -- for
 instance, you are not allowed to simply convert results obtained with
 the RDD API to Data Frames.
-Note the function *toCSVLine* in `answer_skeleton.py` that also convert DataFrames into a CSV string.
+Note that the function *toCSVLine* in `answer.py` also converts DataFrames into CSV strings.
 
 ## Tests
 
