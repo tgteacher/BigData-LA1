@@ -27,8 +27,8 @@ and clone it using `git clone <repo_url>`.
 ## Assignment submission
 
 You have to submit your assignment through GitHub classroom, using the following procedure:
-1. Accept the assignment at [TODO]. This will create your own copy
-   of the assignment repository, located at http://github.com/tgteacher/BigData-W2019-your_github_username.
+1. Accept the assignment at https://classroom.github.com/a/eCH5w90B. This will create your own copy
+   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2019-your_github_username.
 2. Clone your copy of the assignment repository on your computer, and 
 implement the functions in `answers/answer.py`, following the instructions in the 
 documentation strings. A skeleton of your answer file already exists in file `answers/answer.py`
@@ -68,7 +68,7 @@ it is also radical and you should be very meticulous with your coding:
 make a single syntax error in your answer file, such as a spurious 
 tabulation character, and all the tests will fail! To avoid that kind 
 of surprises, you are strongly encouraged to check the output of the 
-tests on [Travis CI](https://travis-ci.com/tgteacher) regularly. 
+tests on [Travis CI](https://travis-ci.com/tgteacher) regularly.    
 
 #### Specific tests
 
@@ -102,7 +102,7 @@ but in general be cool: if you don't aim at cheating, you probably won't :)
    without providing a correct, non-hardcoded, solution will receive the grade of 0.
 
  
-### Test environment and live feedback.
+### Test environment and live feedback
 
 Your code will be tested with Python 3.5 in a Ubuntu environment 
 provided by Travis CI. It is your responsibility to ensure that the 

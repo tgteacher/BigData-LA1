@@ -9,8 +9,8 @@ from pyspark.sql.functions import desc
 INTRODUCTION
 
 The goal of this assignment is to implement a basic analysis of textual 
-data using [Apache Spark](http://spark.apache.org) and 
-[Dask](https://dask.org). 
+data using Apache Spark (http://spark.apache.org) and 
+Dask (https://dask.org). 
 '''
 
 '''
@@ -28,6 +28,7 @@ We will use the 2015 and 2016 data sets available in directory `data`.
 
 '''
 HELPER FUNCTIONS
+
 These functions are here to help you. Instructions will tell you when
 you should use them. Don't modify them!
 '''
@@ -349,7 +350,7 @@ def count_dask(filename):
 
 def parks_dask(filename):
     '''
-    Write a Python script using DataFrames that prints the number of trees that are *located in a park*.
+    Write a Python script using Dask that prints the number of trees that are *located in a park*.
     To get the park location information, have a look at the *Nom_parc* column (name of park).
     Test file: tests/test_parks_dask.py
     Note: The return value should be an integer
@@ -360,7 +361,7 @@ def parks_dask(filename):
 
 def uniq_parks_dask(filename):
     '''
-    Write a Python script using DataFrames that prints the list of unique parks
+    Write a Python script using Dask that prints the list of unique parks
     where trees were treated. The list must be ordered alphabetically. Every
     element in the list must be printed on a new line.
     Test file: tests/test_uniq_parks_dask.py
@@ -372,7 +373,7 @@ def uniq_parks_dask(filename):
 
 def uniq_parks_counts_dask(filename):
     '''
-    Write a Python script using DataFrames that counts the number of trees
+    Write a Python script using Dask that counts the number of trees
     treated in each park and prints a list of "park,count" pairs in a CSV
     manner ordered alphabetically by the park name. Every element in the list
     must be printed on a new line.
@@ -386,7 +387,7 @@ def uniq_parks_counts_dask(filename):
 
 def frequent_parks_count_dask(filename):
     '''
-    Write a Python script using DataFrames that prints the list of the 10 parks
+    Write a Python script using Dask that prints the list of the 10 parks
     with the highest number of treated trees. Parks must be ordered by
     decreasing number of treated trees and by alphabetical order when they have
     similar number.  Every list element must be printed on a new line.
@@ -400,7 +401,7 @@ def frequent_parks_count_dask(filename):
 
 def intersection_dask(filename1, filename2):
     '''
-    Write a Python script using DataFrames that prints the alphabetically
+    Write a Python script using Dask that prints the alphabetically
     sorted list of parks that had trees treated both in 2016 and 2015. Every
     list element must be printed on a new line.
     Test file: tests/test_intersection_dask.py
