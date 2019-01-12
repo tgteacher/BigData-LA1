@@ -1,172 +1,118 @@
 # LA1: Apache Spark RDD and DataFrame APIs
 
-The goal of this assignment is to implement a basic analysis of
-textual data using Apache Spark. To get started smoothly and become
-familiar with the assignment's technical context (Git, GitHub,
-pytest), we will implement a few steps in plain Python.
+## Important note
 
+This assignment must be submitted individually. You are encouraged to 
+discuss and exchange solutions during the lab sessions or on Slack, but 
+you are *not allowed* to share code electronically. Plagiarism, 
+unauthorized collaboration and other offences under Concordia's 
+[Academic Code of 
+Conduct](http://www.concordia.ca/students/academic-integrity/offences.html) 
+will be firmly handled. 
 
-Important preliminary notes:
+## Preliminary comments
 
-* The requested tasks, described below, are all evaluated with a test
-  run with [pytest](http://pytest.org). Your assignment will be graded
-  directly from the result of those tests, see details
-  [here](./README.md). You may want to get familiar with pytest before
-  you start.
-  
-* The tests contain examples of expected outputs that you may want to
-  check in case the instruction below are unclear. Every detail in
-  your answer counts! In particular, you should pay attention to the
-  exact syntax of the expected output: forget a new line and the tests
-  won't pass!
+To submit this assignment, you will have to be familiar with Git and
+GitHub. If you have never used these technologies, it is recommended to 
+go through the following tutorials:
+* [Git](https://rogerdudler.github.io/git-guide)
+* [GitHub](https://guides.github.com/)
 
-* Your answers to the tasks below *must* be located in file `answers/answer.py`. 
+In particular, you will have to be able to:
+1. *Clone* a Git repository from GitHub: find the URL of a GitHub repository
+and clone it using `git clone <repo_url>`.
+2. *Commit* modifications to a local clone of a Git repository: `git add <file>` and `git commit -m "message"`.
+3. *Push* modifications from your local clone to the origin repository on GitHub: `git push`.
 
-* A skeleton of your answer file already exists in file `answers/answer.py`
+## Assignment submission
+
+You have to submit your assignment through GitHub classroom, using the following procedure:
+1. Accept the assignment at [TODO]. This will create your own copy
+   of the assignment repository, located at http://github.com/tgteacher/BigData-W2019-your_github_username.
+2. Clone your copy of the assignment repository on your computer, and 
+implement the functions in `answers/answer.py`, following the instructions in the 
+documentation strings. A skeleton of your answer file already exists in file `answers/answer.py`
   with the required syntax for each function.
+3. Commit your solution to your local copy of the assignment repository.
+4. Push your solution to your GitHub copy of the assignment repository.
 
-# Dataset
+**Important**: please make sure that the email address you use in Moodle is
+added to your GitHub account (you can add multiple addresses to your 
+GitHub account).
 
-We will study a dataset provided by the city of Montreal that contains
-the list of trees treated against the [emerald ash
-borer](https://en.wikipedia.org/wiki/Emerald_ash_borer). The dataset
-is described at
-http://donnees.ville.montreal.qc.ca/dataset/frenes-publics-proteges-injection-agrile-du-frene
-(use Google translate to translate from French to English). 
+You can repeat steps 3 and 4 as many times as you wish. Your assignment 
+will be graded based on a snapshot of your repository taken on the 
+submission deadline.
 
-We will use the
-[2016](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/0a5984e4-752f-401e-b2d9-aa0567535d39/download/frenepublicinjection2016.csv)
-and
-[2015](http://donnees.ville.montreal.qc.ca/dataset/ebb813dd-a93f-4fb0-8137-80492a30a1fa/resource/a57f787f-bde9-4a59-88d1-4ae742edd9b8/download/frenepublicinjection2015.csv)
-data sets available in directory `data`.
+## Evaluation
 
-# Counting entries
+### Grading
 
-## Task
+#### General Rule
 
-Write a Python script that prints the number of trees (non-header lines) in
-the data file passed as first argument.
+Your assignment will be automatically graded through software tests. 
 
-## Test
+The tests are already available in directory `tests`. You
+may want to run them as you implement your solution, to check that your
+code passes them. To do so, you will have to install `pytest` and simply
+run `pytest tests` in the base directory of the assignment. 
 
-`tests/test_count.py`
+Your grade will be determined from the number of passing tests as 
+returned by pytest. All tests will contribute equally to the final 
+grade. For instance, if 20 tests are evaluated (including disclosed and 
+undisclosed ones), and your solution passes 18 tests, then your grade 
+will be 90%.
 
-# Filtering
+This grading scheme is meant to be transparent and objective. However,
+it is also radical and you should be very meticulous with your coding: 
+make a single syntax error in your answer file, such as a spurious 
+tabulation character, and all the tests will fail! To avoid that kind of suprises,
+you are strongly encouraged to check the output of the tests on Travis regularly. 
 
-## Task
+#### Exceptions
 
-Write a Python script that prints the number of trees that are *located in a park*.
-To get the park location information, have a look at the *Nom_parc* column (name of park).
+1. You are not allowed to modify the tests to make them pass. Every deliberate
+  attempt to modify the tests will result in a grade of 0.
+2. You must use the libraries mentioned in the instructions to 
+  implement the assignment. Any attempt to implement the solution with a different
+  library, for instance Dask when Spark was expected, will result in a grade of 0.
+3. You are not allowed to make the tests pass using a hard-coded solution. Your solution
+  must, in principle, apply to other similar datasets. Any hard-coded solution will receive 
+  the grade of 0.
+4. Any deliberate attempt to trick the grading system by making the tests pass
+   without providing a correct, non-hardcoded, solution will receive the grade of 0.
+ 
+### Test environment and live feedback.
 
-## Test
+Your code will be tested with Python 3.5 in a Ubuntu environment 
+provided by Travis CI. It is your responsibility to ensure that the 
+tests will pass in this environment. The following resources will help 
+you.
 
-`tests/test_parks.py`
+Python 3.5 is available in the computer labs and can be loaded using 
+`module load python/3.5.1`. You can check the version of Python that 
+you are using by running `python --version`. Computer labs can easily be
+accessed remotely, using `ssh`.
 
-# Unique elements
+It is strongly suggested that you run the disclosed tests before 
+submitting your assignment, using `pytest` as explained previously. 
 
-## Task
+Live feedback on your assignment is provided through Travis CI 
+[here](https://travis-ci.com/tgteacher). You will have to sign-in using 
+your GitHub account to see your assignment repository. **Your grade will be determined 
+from the result of the
+tests executed in Travis CI**.
 
-Write a Python script that prints the list of unique parks where trees
-were treated. The list must be ordered alphabetically. Every element in the list must be printed on
-a new line.
+# Grading
 
-## Test
+The total number of tests will be 24, distributed as follows:
+- 6 plain Python tests
+- 6 RDD tests
+- 6 DataFrame tests
+- 6 Dask tests (bonus)
 
-`tests/test_uniq_parks.py`
-
-# Unique counts
-
-## Task
-
-Write a Python script that counts the number of trees treated in each park and
-prints a list of "park,count" pairs in a CSV manner ordered alphabetically by
-the park name. Every element in the list must be printed on a new line.
-
-## Test
-
-`tests/test_uniq_parks_counts.py`
-
-# Most frequent items
-
-## Task
-
-Write a Python script that prints the list of the 10 parks with the
-highest number of treated trees. Parks must be ordered by decreasing
-number of treated trees and by alphabetical order when they have similar number.
-Every list element must be printed on a new line.
-
-## Test
-
-`tests/test_frequent_parks_count.py`
-
-# File combinations
-
-## Task
-
-Write a Python script that prints the alphabetically sorted list of
-parks that had trees treated both in 2016 and 2015. Every list element
-must be printed on a new line.
-
-## Test
-
-`tests/test_intersection.py`
-
-# RDDs
-## Task
-
-Re-implement all the tasks above using Apache
-Spark's Resilient Distributed Datasets API (RDD, see documentation
-[here](https://spark.apache.org/docs/latest/rdd-programming-guide.html)). Outputs
-must be identical to the ones obtained above in plain Python. Note:
-all operations must be re-implemented using the RDD API -- for
-instance, you are not allowed to simply convert results obtained with
-plain Python to RDDs.
-Note that the function *toCSVLine* in `answer.py` converts RDDs into CSV strings.
-
-## Tests
-
-- `tests/test_count_rdd.py`
-- `tests/test_parks_rdd.py`
-- `tests/test_uniq_parks_rdd.py`
-- `tests/test_uniq_parks_counts_rdd.py`
-- `tests/test_frequent_parks_count_rdd.py`
-- `tests/test_intersection_rdd.py`
-
-# DataFrames
-
-
-## Task
-
-Re-implement all the tasks above using Apache
-Spark's DataFrame API (see documentation
-[here](https://spark.apache.org/docs/latest/sql-programming-guide.html)). Outputs
-must be identical to the ones obtained above in plain Python. Note:
-all operations must be re-implemented using the DataFrame API -- for
-instance, you are not allowed to simply convert results obtained with
-the RDD API to Data Frames.
-Note that the function *toCSVLine* in `answer.py` also converts DataFrames into CSV strings.
-
-## Tests
-
-- `tests/test_count_df.py`
-- `tests/test_parks_df.py`
-- `tests/test_uniq_parks_df.py`
-- `tests/test_uniq_parks_counts_df.py`
-- `tests/test_frequent_parks_count_df.py`
-- `tests/test_intersection_df.py`
-
-# Undisclosed tests
-
-The following tests will be used to evaluate your assignment but will
-remain undisclosed.
-
-- All tests will be repeated using different datasets complying to the
-  same format. This is to prevent you from just hard-coding the
-  results of the tests in your answers. Hard-coded answers will be
-  graded at most 50%, since all tests will be repeated on undisclosed
-  data.
-
-The total number of tests will be 36, distributed as follows:
-- 12 plain Python tests (6 disclosed, 6 undisclosed)
-- 12 RDD tests (6 disclosed, 6 undisclosed)
-- 12 DataFrame tests (6 disclosed, 6 undisclosed)
+The Dask tests are bonuses, meaning that the assignment will be graded 
+out of 18. For instance, passing 18 tests will give a mark of 100, 
+passing 9 tests will give a mark of 50, and passing 24 tests will give 
+a mark of 133. Bonuses will be counted in the final grade, but their weight
+will be left to the appreciation of the instructor and announced later.
