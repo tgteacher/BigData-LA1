@@ -66,10 +66,29 @@ will be 90%.
 This grading scheme is meant to be transparent and objective. However,
 it is also radical and you should be very meticulous with your coding: 
 make a single syntax error in your answer file, such as a spurious 
-tabulation character, and all the tests will fail! To avoid that kind of suprises,
-you are strongly encouraged to check the output of the tests on Travis regularly. 
+tabulation character, and all the tests will fail! To avoid that kind 
+of surprises, you are strongly encouraged to check the output of the 
+tests on [Travis CI](https://travis-ci.com/tgteacher) regularly. 
+
+#### Specific tests
+
+The total number of tests for this assignment will be 24, distributed as follows:
+- 6 plain Python tests
+- 6 RDD tests
+- 6 DataFrame tests
+- 6 Dask tests (bonus)
+
+The Dask tests are bonuses, meaning that the assignment will be graded 
+out of 18. For instance, passing 18 tests will give a mark of 100, 
+passing 9 tests will give a mark of 50, and passing 24 tests will give 
+a mark of 133. Bonuses will be counted in the final grade, but their weight
+will be left to the appreciation of the instructor and announced later.
+
 
 #### Exceptions
+
+The rules below aim at discouraging cheating. They might sound a bit harsh,
+but in general be cool: if you don't aim at cheating, you probably won't :)
 
 1. You are not allowed to modify the tests to make them pass. Every deliberate
   attempt to modify the tests will result in a grade of 0.
@@ -81,6 +100,7 @@ you are strongly encouraged to check the output of the tests on Travis regularly
   the grade of 0.
 4. Any deliberate attempt to trick the grading system by making the tests pass
    without providing a correct, non-hardcoded, solution will receive the grade of 0.
+
  
 ### Test environment and live feedback.
 
@@ -102,17 +122,3 @@ Live feedback on your assignment is provided through Travis CI
 your GitHub account to see your assignment repository. **Your grade will be determined 
 from the result of the
 tests executed in Travis CI**.
-
-# Grading
-
-The total number of tests will be 24, distributed as follows:
-- 6 plain Python tests
-- 6 RDD tests
-- 6 DataFrame tests
-- 6 Dask tests (bonus)
-
-The Dask tests are bonuses, meaning that the assignment will be graded 
-out of 18. For instance, passing 18 tests will give a mark of 100, 
-passing 9 tests will give a mark of 50, and passing 24 tests will give 
-a mark of 133. Bonuses will be counted in the final grade, but their weight
-will be left to the appreciation of the instructor and announced later.
