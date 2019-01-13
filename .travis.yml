@@ -16,10 +16,11 @@ before_install:
   # The two lines below ensure that everybody will run the same tests in
   # case they are updated
   - \mv -f tests tests.old
-  - mkdir vanilla_tests && (cd vanilla_tests ; git clone $ASSIGNMENT_REPO )
+  - git clone $ASSIGNMENT_REPO vanilla
+  - \mv -f vanilla/tests .
 
 script:
- - pytest -q vanilla_tests
+ - pytest -q tests
 
 after_success:
   - echo "success"
