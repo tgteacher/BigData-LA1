@@ -1,3 +1,4 @@
+import csv
 import os
 import sys
 # Spark imports
@@ -103,7 +104,7 @@ def uniq_parks(filename):
     were treated. The list must be ordered alphabetically. Every element in the list must be printed on
     a new line.
     Test file: tests/test_uniq_parks.py
-    Note: The return value should be a CSV string
+    Note: The return value should be a string with one park name per line
     '''
 
     # ADD YOUR CODE HERE
