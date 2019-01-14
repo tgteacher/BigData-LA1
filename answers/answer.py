@@ -84,7 +84,7 @@ def count(filename):
     '''
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise ExceptionException("Not implemented yet")
 
 def parks(filename):
     '''
@@ -95,7 +95,7 @@ def parks(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks(filename):
     '''
@@ -107,7 +107,7 @@ def uniq_parks(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts(filename):
     '''
@@ -121,7 +121,7 @@ def uniq_parks_counts(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count(filename):
     '''
@@ -135,7 +135,7 @@ def frequent_parks_count(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection(filename1, filename2):
     '''
@@ -148,7 +148,7 @@ def intersection(filename1, filename2):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 '''
 SPARK RDD IMPLEMENTATION
@@ -176,7 +176,7 @@ def count_rdd(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def parks_rdd(filename):
     '''
@@ -189,7 +189,7 @@ def parks_rdd(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_rdd(filename):
     '''
@@ -203,7 +203,7 @@ def uniq_parks_rdd(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts_rdd(filename):
     '''
@@ -219,7 +219,7 @@ def uniq_parks_counts_rdd(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count_rdd(filename):
     '''
@@ -235,7 +235,7 @@ def frequent_parks_count_rdd(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection_rdd(filename1, filename2):
     '''
@@ -250,7 +250,7 @@ def intersection_rdd(filename1, filename2):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 
 '''
@@ -280,7 +280,7 @@ def count_df(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def parks_df(filename):
     '''
@@ -293,7 +293,7 @@ def parks_df(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_df(filename):
     '''
@@ -307,7 +307,7 @@ def uniq_parks_df(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts_df(filename):
     '''
@@ -323,7 +323,7 @@ def uniq_parks_counts_df(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count_df(filename):
     '''
@@ -339,7 +339,7 @@ def frequent_parks_count_df(filename):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection_df(filename1, filename2):
     '''
@@ -354,7 +354,7 @@ def intersection_df(filename1, filename2):
     spark = init_spark()
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 '''
 DASK IMPLEMENTATION (bonus)
@@ -377,7 +377,7 @@ def count_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def parks_dask(filename):
     '''
@@ -388,7 +388,7 @@ def parks_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_dask(filename):
     '''
@@ -400,7 +400,7 @@ def uniq_parks_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts_dask(filename):
     '''
@@ -414,7 +414,7 @@ def uniq_parks_counts_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count_dask(filename):
     '''
@@ -428,7 +428,7 @@ def frequent_parks_count_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection_dask(filename1, filename2):
     '''
@@ -441,4 +441,4 @@ def intersection_dask(filename1, filename2):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
