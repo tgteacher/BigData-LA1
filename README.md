@@ -59,8 +59,7 @@ run `pytest tests` in the base directory of the assignment.
 
 Your grade will be determined from the number of passing tests as 
 returned by pytest. All tests will contribute equally to the final 
-grade. For instance, if 20 tests are evaluated (including disclosed and 
-undisclosed ones), and your solution passes 18 tests, then your grade 
+grade. For instance, if 20 tests are evaluated, and your solution passes 18 tests, then your grade 
 will be 90%.
 
 This grading scheme is meant to be transparent and objective. However,
