@@ -5,4 +5,9 @@ from answer import uniq_parks_rdd
 
 def test_uniq_parks_rdd():
     a = uniq_parks_rdd("./data/frenepublicinjection2016.csv")
-    assert(a == open("tests/list_parks.txt","r").read())
+    try:
+        out = open("tests/list_parks.txt","r").read()
+        assert(a == out)
+    except:
+        out = open("tests/list_parks.txt","r", encoding="ISO-8859-1").read()
+        assert(a == out)
