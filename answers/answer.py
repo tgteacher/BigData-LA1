@@ -1,9 +1,15 @@
+import csv
 import os
 import sys
+# Spark imports
 from pyspark.rdd import RDD
 from pyspark.sql import DataFrame
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import desc
+# Dask imports
+import dask.bag as db
+import dask.dataframe as df  # you can use Dask bags or dataframes
+from csv import reader
 
 '''
 INTRODUCTION
@@ -33,12 +39,14 @@ These functions are here to help you. Instructions will tell you when
 you should use them. Don't modify them!
 '''
 
-#Initialize a spark session. MODIFY AT YOUR OWN RISKS.
-spark = SparkSession \
-    .builder \
-    .appName("Python Spark SQL basic example") \
-    .config("spark.some.config.option", "some-value") \
-    .getOrCreate()
+#Initialize a spark session.
+def init_spark():
+    spark = SparkSession \
+        .builder \
+        .appName("Python Spark SQL basic example") \
+        .config("spark.some.config.option", "some-value") \
+        .getOrCreate()
+    return spark
 
 #Useful functions to print RDDs and Dataframes.
 def toCSVLineRDD(rdd):
@@ -77,7 +85,7 @@ def count(filename):
     '''
     
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise ExceptionException("Not implemented yet")
 
 def parks(filename):
     '''
@@ -88,7 +96,7 @@ def parks(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks(filename):
     '''
@@ -96,11 +104,11 @@ def uniq_parks(filename):
     were treated. The list must be ordered alphabetically. Every element in the list must be printed on
     a new line.
     Test file: tests/test_uniq_parks.py
-    Note: The return value should be a CSV string
+    Note: The return value should be a string with one park name per line
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts(filename):
     '''
@@ -114,7 +122,7 @@ def uniq_parks_counts(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count(filename):
     '''
@@ -128,7 +136,7 @@ def frequent_parks_count(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection(filename1, filename2):
     '''
@@ -141,7 +149,7 @@ def intersection(filename1, filename2):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 '''
 SPARK RDD IMPLEMENTATION
@@ -166,8 +174,10 @@ def count_rdd(filename):
     Note: The return value should be an integer
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def parks_rdd(filename):
     '''
@@ -177,8 +187,10 @@ def parks_rdd(filename):
     Note: The return value should be an integer
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_rdd(filename):
     '''
@@ -189,8 +201,10 @@ def uniq_parks_rdd(filename):
     Note: The return value should be a CSV string
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts_rdd(filename):
     '''
@@ -203,8 +217,10 @@ def uniq_parks_counts_rdd(filename):
           Have a look at the file *tests/list_parks_count.txt* to get the exact return format.
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count_rdd(filename):
     '''
@@ -217,8 +233,10 @@ def frequent_parks_count_rdd(filename):
           Have a look at the file *tests/frequent.txt* to get the exact return format.
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection_rdd(filename1, filename2):
     '''
@@ -230,8 +248,10 @@ def intersection_rdd(filename1, filename2):
           Have a look at the file *tests/intersection.txt* to get the exact return format.
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 
 '''
@@ -258,8 +278,10 @@ def count_df(filename):
     Note: The return value should be an integer
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def parks_df(filename):
     '''
@@ -269,8 +291,10 @@ def parks_df(filename):
     Note: The return value should be an integer
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_df(filename):
     '''
@@ -281,8 +305,10 @@ def uniq_parks_df(filename):
     Note: The return value should be a CSV string
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts_df(filename):
     '''
@@ -295,8 +321,10 @@ def uniq_parks_counts_df(filename):
           Have a look at the file *tests/list_parks_count.txt* to get the exact return format.
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count_df(filename):
     '''
@@ -309,8 +337,10 @@ def frequent_parks_count_df(filename):
           Have a look at the file *tests/frequent.txt* to get the exact return format.
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection_df(filename1, filename2):
     '''
@@ -322,8 +352,10 @@ def intersection_df(filename1, filename2):
           Have a look at the file *tests/intersection.txt* to get the exact return format.
     '''
 
+    spark = init_spark()
+    
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 '''
 DASK IMPLEMENTATION (bonus)
@@ -346,7 +378,7 @@ def count_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def parks_dask(filename):
     '''
@@ -357,7 +389,7 @@ def parks_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_dask(filename):
     '''
@@ -369,7 +401,7 @@ def uniq_parks_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def uniq_parks_counts_dask(filename):
     '''
@@ -383,7 +415,7 @@ def uniq_parks_counts_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def frequent_parks_count_dask(filename):
     '''
@@ -397,7 +429,7 @@ def frequent_parks_count_dask(filename):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")
 
 def intersection_dask(filename1, filename2):
     '''
@@ -410,4 +442,4 @@ def intersection_dask(filename1, filename2):
     '''
 
     # ADD YOUR CODE HERE
-    raise ("Not implemented yet")
+    raise Exception("Not implemented yet")

@@ -27,8 +27,8 @@ and clone it using `git clone <repo_url>`.
 ## Assignment submission
 
 You have to submit your assignment through GitHub classroom, using the following procedure:
-1. Accept the assignment at https://classroom.github.com/a/eCH5w90B. This will create your own copy
-   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2019-your_github_username.
+1. Accept the assignment at https://classroom.github.com/a/5klkOEFn. This will create your own copy
+   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2020-your_github_username.
 2. Clone your copy of the assignment repository on your computer, and 
 implement the functions in `answers/answer.py`, following the instructions in the 
 documentation strings. A skeleton of your answer file already exists in file `answers/answer.py`
@@ -59,8 +59,7 @@ run `pytest tests` in the base directory of the assignment.
 
 Your grade will be determined from the number of passing tests as 
 returned by pytest. All tests will contribute equally to the final 
-grade. For instance, if 20 tests are evaluated (including disclosed and 
-undisclosed ones), and your solution passes 18 tests, then your grade 
+grade. For instance, if 20 tests are evaluated, and your solution passes 18 tests, then your grade 
 will be 90%.
 
 This grading scheme is meant to be transparent and objective. However,
