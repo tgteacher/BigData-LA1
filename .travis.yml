@@ -1,8 +1,12 @@
 sudo: true
 os: linux
 language: python
+
 python:
     - "3.5.7"
+env:
+- ASSIGNMENT_REPO=https://github.com/tgteacher/BigData-LA1.git PYTHONHASHSEED=0 PYTHONPATH=$PYTHONPATH:$PWD/answers JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
@@ -10,13 +14,17 @@ before_install:
   - sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
   - pip install pyspark
   - pip install pytest
+  # The two lines below ensure that everybody will run the same tests in
+  # case they are updated
+  - \mv -f tests tests.old
+  - git clone $ASSIGNMENT_REPO vanilla
+  - \mv -f vanilla/tests .
+
 script:
- - export PYTHONHASHSEED=0
- - export PYTHONPATH=$PYTHONPATH:`pwd`/answers
- - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
  - pytest -q tests
 
 after_success:
   - echo "success"
+
 after_failure:
   - echo "failure"
