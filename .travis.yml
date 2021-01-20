@@ -3,7 +3,7 @@ os: linux
 language: python
 
 python:
-    - "3.5"
+    - "3.6"
 env:
 - ASSIGNMENT_REPO=https://github.com/tgteacher/BigData-LA1.git PYTHONHASHSEED=0 PYTHONPATH=$PYTHONPATH:$PWD/answers JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 

@@ -27,8 +27,8 @@ and clone it using `git clone <repo_url>`.
 ## Assignment submission
 
 You have to submit your assignment through GitHub classroom, using the following procedure:
-1. Accept the assignment at https://classroom.github.com/a/5klkOEFn. This will create your own copy
-   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2020-your_github_username.
+1. Accept the assignment at https://classroom.github.com/a/e7sFtQpz. This will create your own copy
+   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2021-your_github_username.
 2. Clone your copy of the assignment repository on your computer, and 
 implement the functions in `answers/answer.py`, following the instructions in the 
 documentation strings. A skeleton of your answer file already exists in file `answers/answer.py`
@@ -103,15 +103,10 @@ but in general be cool: if you don't aim at cheating, you probably won't :)
  
 ### Test environment and live feedback
 
-Your code will be tested with Python 3.5 in a Ubuntu environment 
+Your code will be tested with Python 3.6 in a Ubuntu environment 
 provided by Travis CI. It is your responsibility to ensure that the 
 tests will pass in this environment. The following resources will help 
 you.
-
-Python 3.5 is available in the computer labs and can be loaded using 
-`module load python/3.5.1`. You can check the version of Python that 
-you are using by running `python --version`. Computer labs can easily be
-accessed remotely, using `ssh`.
 
 It is strongly suggested that you run the disclosed tests before 
 submitting your assignment, using `pytest` as explained previously. 
