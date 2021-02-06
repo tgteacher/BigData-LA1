@@ -37,7 +37,8 @@ jobs:
       run: |
         git remote add upstream https://github.com/tgteacher/BigData-LA1.git
         git fetch upstream master
-        git checkout upstream/master -- tests 
+        git checkout upstream/master -- tests
+        cat tests/test_frequent_parks.count
     - name: Test with pytest
       env: 
         PYTHONHASHSEED: 0
