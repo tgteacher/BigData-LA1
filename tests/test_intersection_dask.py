@@ -8,5 +8,13 @@ def test_intersection_dask():
         out = open("tests/intersection.txt","r").read()
         assert(a == out)
     except:
-        out = open("tests/intersection.txt","r", encoding="ISO-8859-1").read()
-        assert(a == out)
+        try:
+            out = open("tests/intersection.txt","r", encoding="ISO-8859-1").read()
+            assert(a == out)
+        except:
+            try:
+                out = open("tests/intersection.txt","r", encoding="utf-8").read()
+                assert(a == out)
+            except:
+                out = open("tests/intersection.txt","r", encoding="latin1").read()
+                assert(a == out)
