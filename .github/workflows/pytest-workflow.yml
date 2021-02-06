@@ -39,7 +39,7 @@ jobs:
           repository: tgteacher/BigData-LA1
           path: vanilla
           run: |
-             mv -f vanilla/tests ${{ GITHUB_WORKSPACE }}/tests
+             mv -f vanilla/tests $GITHUB_WORKSPACE/tests
     - name: Test with pytest
       run: |
-        pytest ${{ GITHUB_WORKSPACE }}
+        pytest $GITHUB_WORKSPACE
