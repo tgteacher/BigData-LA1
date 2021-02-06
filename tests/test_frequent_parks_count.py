@@ -9,5 +9,9 @@ def test_frequent_parks_count():
         out = open("tests/frequent.txt","r").read()
         assert(a == out)
     except:
-        out = open("tests/frequent.txt","r", encoding="ISO-8859-1").read()
+        try:
+            out = open("tests/frequent.txt","r", encoding="ISO-8859-1").read()
+        except:
+            out = open("tests/frequent.txt","r", encoding="utf-8").read()
+            
         assert(a == out)
