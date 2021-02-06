@@ -39,5 +39,8 @@ jobs:
         git fetch upstream master
         git checkout upstream/master -- tests 
     - name: Test with pytest
+      env: 
+        PYTHONHASHSEED: 0
+        PYTHONPATH: ${{ GITHUB_WORKSPACE }}/answers
       run: |
         pytest
