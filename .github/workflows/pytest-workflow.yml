@@ -43,4 +43,4 @@ jobs:
         PYTHONHASHSEED: 0
         PYTHONPATH: $PWD/answers
       run: |
-        pytest
+        PYTHONPATH=$PWD/answers pytest
