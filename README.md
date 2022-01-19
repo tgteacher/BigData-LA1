@@ -27,8 +27,8 @@ and clone it using `git clone <repo_url>`.
 ## Assignment submission
 
 You have to submit your assignment through GitHub classroom, using the following procedure:
-1. Accept the assignment at https://classroom.github.com/a/e7sFtQpz. This will create your own copy
-   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2021-your_github_username.
+1. Accept the assignment at https://classroom.github.com/a/Vxy2bnUl. This will create your own copy
+   of the assignment repository, located at http://github.com/tgteacher/bigdata-la1-w2022-your_github_username.
 2. Clone your copy of the assignment repository on your computer, and 
 implement the functions in `answers/answer.py`, following the instructions in the 
 documentation strings. A skeleton of your answer file already exists in file `answers/answer.py`
@@ -67,7 +67,7 @@ it is also radical and you should be very meticulous with your coding:
 make a single syntax error in your answer file, such as a spurious 
 tabulation character, and all the tests will fail! To avoid that kind 
 of surprises, you are strongly encouraged to check the output of the 
-tests on [Travis CI](https://travis-ci.com/tgteacher) regularly.    
+tests on GitHub actions regularly.    
 
 #### Specific tests
 
@@ -103,16 +103,10 @@ but in general be cool: if you don't aim at cheating, you probably won't :)
  
 ### Test environment and live feedback
 
-Your code will be tested with Python 3.6 in a Ubuntu environment 
-provided by Travis CI. It is your responsibility to ensure that the 
-tests will pass in this environment. The following resources will help 
-you.
-
+Your code will be tested with Python 3.8. It is your responsibility to
+ensure that the tests will pass in this environment. Live feedback on your
+assignment is provided through GitHub actions. **Your grade will be
+determined from the result of the tests executed in GitHub actions**.
 It is strongly suggested that you run the disclosed tests before 
 submitting your assignment, using `pytest` as explained previously. 
 
-Live feedback on your assignment is provided through Travis CI 
-[here](https://travis-ci.com/tgteacher). You will have to sign-in using 
-your GitHub account to see your assignment repository. **Your grade will be determined 
-from the result of the
-tests executed in Travis CI**.
