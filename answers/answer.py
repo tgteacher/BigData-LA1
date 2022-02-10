@@ -71,7 +71,7 @@ def toCSVLine(data):
 Plain PYTHON implementation
 
 To get started smoothly and become familiar with the assignment's 
-technical context (Git, GitHub, pytest, Travis), we will implement a 
+technical context (Git, GitHub, pytest, GitHub actions), we will implement a 
 few steps in plain Python.
 '''
 
