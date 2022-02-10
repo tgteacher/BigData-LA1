@@ -85,7 +85,6 @@ def count(filename):
     '''
     
     # ADD YOUR CODE HERE
-    return 27244
     raise ExceptionException("Not implemented yet")
 
 def parks(filename):
