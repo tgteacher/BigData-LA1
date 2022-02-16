@@ -1,8 +1,9 @@
 import subprocess
 import sys
-sys.path.insert(0, './answers')
+import os
+sys.path.insert(0, os.path.join('.', 'answers'))
 from answer import count
 
 def test_count():
-    a = count("./data/frenepublicinjection2016.csv")
+    a = count(os.path.join('.', 'data', 'frenepublicinjection2016.csv'))
     assert(a == 27244)
