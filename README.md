@@ -55,7 +55,8 @@ Your assignment will be automatically graded through software tests.
 The tests are already available in directory `tests`. You
 may want to run them as you implement your solution, to check that your
 code passes them. To do so, you will have to install `pytest` and simply
-run `pytest tests` in the base directory of the assignment. 
+run `pytest tests` in the base directory of the assignment. Alternatively, you
+can install [`act`](https://github.com/nektos/act) to run the GitHub action locally.
 
 Your grade will be determined from the number of passing tests as 
 returned by pytest. All tests will contribute equally to the final 
@@ -75,13 +76,7 @@ The total number of tests for this assignment will be 24, distributed as follows
 - 6 plain Python tests
 - 6 RDD tests
 - 6 DataFrame tests
-- 6 Dask tests (bonus)
-
-The Dask tests are bonuses, meaning that the assignment will be graded 
-out of 18. For instance, passing 18 tests will give a mark of 100, 
-passing 9 tests will give a mark of 50, and passing 24 tests will give 
-a mark of 133. Bonuses will be counted in the final grade, but their weight
-will be left to the appreciation of the instructor and announced later.
+- 6 Dask tests
 
 
 #### Exceptions
@@ -103,10 +98,10 @@ but in general be cool: if you don't aim at cheating, you probably won't :)
  
 ### Test environment and live feedback
 
-Your code will be tested with Python 3.8. It is your responsibility to
+Your code will be tested with Python 3.10. It is your responsibility to
 ensure that the tests will pass in this environment. Live feedback on your
 assignment is provided through GitHub actions. **Your grade will be
 determined from the result of the tests executed in GitHub actions**.
 It is strongly suggested that you run the disclosed tests before 
-submitting your assignment, using `pytest` as explained previously. 
+submitting your assignment, using `pytest` or `act` as explained previously. 
 
