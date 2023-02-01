@@ -358,7 +358,7 @@ def intersection_df(filename1, filename2):
     raise NotImplementedError
 
 '''
-DASK IMPLEMENTATION (bonus)
+DASK IMPLEMENTATION
 
 You will now re-implement all the tasks above using Dask (see 
 documentation at http://docs.dask.org/en/latest). Outputs must be 
