@@ -39,6 +39,7 @@ jobs:
         git fetch upstream master
         git checkout upstream/master -- tests
     - name: Test with pytest
+      timeout-minutes: 15
       env: 
         PYTHONHASHSEED: 0
       run: pytest
